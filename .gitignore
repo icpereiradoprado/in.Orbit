@@ -1,0 +1,15 @@
+#Dependências do Node.js
+/node_modules
+
+#Sistema operacional e IDE
+.vscode/
+
+# Configurações locais e ambientes
+.env
+biome.json
+
+#Migrations (Gerar automáticamente)
+server/.migrations
+
+# Configurações do Drizzle ORM
+drizzle-config.ts
