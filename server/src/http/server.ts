@@ -7,6 +7,7 @@ import {
 import { createGoalRoute } from "./routes/create-goal";
 import { createCompletionRoute } from "./routes/create-completion";
 import { getPedingGoalsRoute } from "./routes/get-pending-goals";
+import { getWeekSummaryRoute } from "./routes/get-week-summary";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -16,6 +17,8 @@ app.setSerializerCompiler(serializerCompiler);
 
 //`register` serve para registrar um plugin
 app.register(getPedingGoalsRoute);
+
+app.register(getWeekSummaryRoute);
 
 app.register(createGoalRoute);
 
