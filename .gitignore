@@ -13,4 +13,4 @@ server/docker-compose.yml
 server/.migrations
 
 # Configurações do Drizzle ORM
-server/drizzle-config.ts
+server/drizzle.config.ts
