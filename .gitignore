@@ -5,11 +5,12 @@ server/node_modules
 .vscode/
 
 # Configurações locais e ambientes
-.env
-biome.json
+server/.env
+server/biome.json
+server/docker-compose.yml
 
 #Migrations (Gerar automáticamente)
 server/.migrations
 
 # Configurações do Drizzle ORM
-drizzle-config.ts
+server/drizzle-config.ts
