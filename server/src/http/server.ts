@@ -8,8 +8,14 @@ import { createGoalRoute } from "./routes/create-goal";
 import { createCompletionRoute } from "./routes/create-completion";
 import { getPedingGoalsRoute } from "./routes/get-pending-goals";
 import { getWeekSummaryRoute } from "./routes/get-week-summary";
+import fastifyCors from "@fastify/cors";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
+
+//registra o plugin de CORS
+app.register(fastifyCors, {
+	origin: "*", //Como é um treinamento, ele permite qualquer domínio, porém em PRD, adicionar uma URL específica
+});
 
 // Add schema validator and serializer
 app.setValidatorCompiler(validatorCompiler);
